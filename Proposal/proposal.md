@@ -1,7 +1,7 @@
 # Machine Learning Engineer Nanodegree
 ## Capstone Proposal
-Joe Udacity  
-December 31st, 2050
+Alex Erfurt  
+January 11st, 2020
 [Source of template](https://github.com/udacity/machine-learning/blob/master/projects/capstone/capstone_proposal_template.md)
 
 ## Proposal
