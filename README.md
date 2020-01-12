@@ -7,4 +7,6 @@ This repo contains all the code I used for the capstone project of [Udacity's Ma
 You can find the final proposal and report in their respective folders.
 
 ## Software Requirements
-tbd
+- Python 3.5
+- Numpy
+- Pandas
