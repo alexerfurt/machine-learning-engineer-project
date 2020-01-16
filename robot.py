@@ -13,6 +13,9 @@ class Robot(object):
         self.heading = 'up'
         self.maze_dim = maze_dim
 
+        self.start
+        self.reset()
+
     def next_move(self, sensors):
         '''
         Use this function to determine the next move the robot should make,
@@ -39,3 +42,10 @@ class Robot(object):
         movement = 0
 
         return rotation, movement
+
+    def reset(self):
+        # ToDo
+        self.heading =
+
+    def report(self):
+        # ToDo
