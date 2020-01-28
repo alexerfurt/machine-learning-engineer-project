@@ -1,4 +1,4 @@
-# Machine Learning Engineer Nanodegree
+# [WIP] Machine Learning Engineer Nanodegree
 ## Capstone Proposal
 Alex Erfurt  
 January 11st, 2020
