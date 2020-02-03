@@ -10,6 +10,7 @@ This repo contains all the code I used for the capstone project of [Udacity's Ma
 You can find the final proposal and report in their respective folders.
 
 ## Software Requirements/ Setup
+- Gym/Environment...
 - Python 3.x
 - Jupyter Notebook
 - Numpy
