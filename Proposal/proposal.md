@@ -1,11 +1,9 @@
 # [WIP] Machine Learning Engineer Nanodegree
 ## Capstone Proposal
-Alex Erfurt  
-January 11st, 2020
-[Source of template](https://github.com/udacity/machine-learning/blob/master/projects/capstone/capstone_proposal_template.md)
-
-## Proposal
 _(approx. 2-3 pages)_
+_Alex Erfurt_  
+_February 6th, 2020_
+[Source of template](https://github.com/udacity/machine-learning/blob/master/projects/capstone/capstone_proposal_template.md)
 
 ### Domain Background
 _(approx. 1-2 paragraphs)_
@@ -13,14 +11,14 @@ _(approx. 1-2 paragraphs)_
 In this section, provide brief details on the background information of the domain from which the project is proposed. Historical information relevant to the project should be included. It should be clear how or why a problem in the domain can or should be solved. Related academic research should be appropriately cited in this section, including why that research is relevant. Additionally, a discussion of your personal motivation for investigating a particular problem in the domain is encouraged but not required.
 
 DRAFT (Source Kaggle Comp.):
-Reinforcement learning is clearly a crucial piece in the next wave of data science learning... 
+After some time of long and thoughtful research and considerations, I finally decided to build my capstone project in the domain of Reinforcement Learning. Reason is that I very much enjoyed the complexity & challenge of the previous project (Quadcopter), as much as I was also impressed by the results of creating an agent that actually learns in such a complex environment. Reinforcement Learning is clearly a crucial piece in the next wave of data science & machine learning. I knew I wanted to learn more about this field of AI, so I looked for resources to learn more (of which I can highly recommend [David Silver's lecture on RL](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)) and ideas for hands-on practice incl. a capstone project topic. Due to my fascination of "solving" games through building intelligent agent that can reach super-human level, which is commonly used to train and test RL-algorithms on, I decided to try it myself and picked Connect4 (or sometimes called Four-in-A-Row) as a game that is challenging enough without being to simple either. Clearly, it's not like Go considering complexity, however, there are still more than [4.5 trillion game positions](https://medium.com/applied-data-science/how-to-build-your-own-alphazero-ai-using-python-and-keras-7f664945c188)! I believe that breaking down this sort of problem, learning various RL concepts more in depth and solving it will have you being prepared for all the different real-world problems that can be tackled with RL.
 
 ### Problem Statement
 _(approx. 1 paragraph)_
 
 In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
 
-DRAFT (Source Kaggle Comp.):
+DRAFT:
 In this game, your objective is to get a certain number of your checkers in a row horizontally, vertically, or diagonally on the game board before your opponent. When it's your turn, you “drop” one of your checkers into one of the columns at the top of the board. Then, let your opponent take their turn. This means each move may be trying to either win for you, or trying to stop your opponent from winning. The default number is four-in-a-row, but we’ll have other options to come soon.
 
 ### Datasets and Inputs
@@ -47,6 +45,10 @@ In this section, propose at least one evaluation metric that can be used to quan
 _(approx. 1 page)_
 
 In this final section, summarize a theoretical workflow for approaching a solution given the problem. Provide thorough discussion for what strategies you may consider employing, what analysis of the data might be required before being used, or which algorithms will be considered for your implementation. The workflow and discussion that you provide should align with the qualities of the previous sections. Additionally, you are encouraged to include small visualizations, pseudocode, or diagrams to aid in describing the project design, but it is not required. The discussion should clearly outline your intended workflow of the capstone project.
+
+### Sources:
+* Kaggle (2020). _Simulation Competitions. Connect X - Connect your checkers in a row before your opponent!_. Retrieved from https://www.kaggle.com/c/connectx (February 6th, 2020).
+* Foster, David (2018). _How to build your own AlphaZero AI using Python and Keras_. Retrieved from https://medium.com/applied-data-science/how-to-build-your-own-alphazero-ai-using-python-and-keras-7f664945c188 (February 6th, 2020).
 
 -----------
 
