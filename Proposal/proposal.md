@@ -19,12 +19,16 @@ _(approx. 1 paragraph)_
 In this section, clearly describe the problem that is to be solved. The problem described should be well defined and should have at least one relevant potential solution. Additionally, describe the problem thoroughly such that it is clear that the problem is quantifiable (the problem can be expressed in mathematical or logical terms) , measurable (the problem can be measured by some metric and clearly observed), and replicable (the problem can be reproduced and occurs more than once).
 
 DRAFT:
-In this game, your objective is to get a certain number of your checkers in a row horizontally, vertically, or diagonally on the game board before your opponent. When it's your turn, you “drop” one of your checkers into one of the columns at the top of the board. Then, let your opponent take their turn. This means each move may be trying to either win for you, or trying to stop your opponent from winning. The default number is four-in-a-row, but we’ll have other options to come soon.
+In the game (environment) that we will use, our objective is to get a certain number of our checkers in a row horizontally, vertically, or diagonally on the game board before our opponent. When it's our turn, we “drop” one of our checkers into one of the columns at the top of the board. Then, let our opponent take their turn. This means each move may be trying to either score a win for us, or trying to stop our opponent from winning. The default number in Kaggle's environment is four-in-a-row, with the intent to have other options to come soon. However, for this work we are going to keep it at four.
+With Kaggle's environment it is possible to let two agent play against each other randomly, i.e. their moves (column to use) are picked completely randomly without any decision process and in disregard of the current game (state). If we let them play randomly for many games it will be ~50% of games won and lost. We want to change this! The problem that we solve is that our agent is not making decisions randomly but learns how to play the game and thus how to win. We will be able to measure that in the ration of how many games our smart agent wins against a randomly playing (not smart) opponent. We shall aim to achieve a ration of >90% wins won out of 100 games.
 
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
 
 In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
+
+DRAFT:
+
 
 ### Solution Statement
 _(approx. 1 paragraph)_
