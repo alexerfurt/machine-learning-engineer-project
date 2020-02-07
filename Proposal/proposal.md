@@ -20,7 +20,7 @@ In this section, clearly describe the problem that is to be solved. The problem 
 
 DRAFT:
 In the game (environment) that we will use, our objective is to get a certain number of our checkers in a row horizontally, vertically, or diagonally on the game board before our opponent. When it's our turn, we “drop” one of our checkers into one of the columns at the top of the board. Then, let our opponent take their turn. This means each move may be trying to either score a win for us, or trying to stop our opponent from winning. The default number in Kaggle's environment is four-in-a-row, with the intent to have other options to come soon. However, for this work we are going to keep it at four.
-With Kaggle's environment it is possible to let two agent play against each other randomly, i.e. their moves (column to use) are picked completely randomly without any decision process and in disregard of the current game (state). If we let them play randomly for many games it will be ~50% of games won and lost. We want to change this! The problem that we solve is that our agent is not making decisions randomly but learns how to play the game and thus how to win. We will be able to measure that in the ration of how many games our smart agent wins against a randomly playing (not smart) opponent. We shall aim to achieve a ration of >90% wins won out of 100 games.
+With Kaggle's game environment it is possible to let two agent play against each other randomly, i.e. their moves (column to use) are picked completely randomly without any decision process and in disregard of the current game (state). If we let them play randomly for many games it will be ~50% of games won and lost. We want to change this! The problem that we solve is that our agent is not making decisions randomly but learns how to play the game and thus how to win. We will be able to measure that in the ration of how many games our smart agent wins against a randomly playing (not smart) opponent. We shall aim to achieve a ration of >90% wins won out of 100 games.
 
 ### Datasets and Inputs
 _(approx. 2-3 paragraphs)_
@@ -28,7 +28,10 @@ _(approx. 2-3 paragraphs)_
 In this section, the dataset(s) and/or input(s) being considered for the project should be thoroughly described, such as how they relate to the problem and why they should be used. Information such as how the dataset or input is (was) obtained, and the characteristics of the dataset or input, should be included with relevant references and citations as necessary It should be clear how the dataset(s) or input(s) will be used in the project and whether their use is appropriate given the context of the problem.
 
 DRAFT:
-
+For this particular problem there is no initial dataset used nor needed, since the agent uses Reinforcement Learning techniques to learn how to play Connect4.
+The environment is provided by the Competitions' organizer Kaggle. More details around the environment rules can be found [here](https://www.kaggle.com/c/connectx/overview/environment-rules).
+Within the environment, an agent starts to interact with the game environment until the game is lost, won or a draw, which defines an episode. The episodes objective is to use the agent in order to get a certain number of your checkers in a row horizontally, vertically, or diagonally on the game board before your opponent.
+Deep Learning neural networks involved will be trained through data that is created through the agent's interaction with and exploration of the environment (self play). There the environmental state after each step will be recorded into a so called Replay Buffer, i.e. a sort of memory of game experiences. This will be used for training neural nets that learn to predict the moves that are most promissing to maximize overall game rewards. ....
 
 ### Solution Statement
 _(approx. 1 paragraph)_
@@ -52,6 +55,7 @@ In this final section, summarize a theoretical workflow for approaching a soluti
 
 ### Sources:
 * Kaggle (2020). _Simulation Competitions. Connect X - Connect your checkers in a row before your opponent!_. Retrieved from https://www.kaggle.com/c/connectx (February 6th, 2020).
+* Kaggle (2020). _Connect X - Overview - Environmental Rules_. Retrieved from https://www.kaggle.com/c/connectx/overview/environment-rules (February 7th, 2020)
 * Foster, David (2018). _How to build your own AlphaZero AI using Python and Keras_. Retrieved from https://medium.com/applied-data-science/how-to-build-your-own-alphazero-ai-using-python-and-keras-7f664945c188 (February 6th, 2020).
 
 -----------
