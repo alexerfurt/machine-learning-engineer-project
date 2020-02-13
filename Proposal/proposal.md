@@ -59,7 +59,7 @@ In this section, provide the details for a benchmark model or result that relate
 
 DRAFT:
 * Unlike the actual Competition on Kaggle, we are not going to enter into play against other people agents in order to get our agents strength assessed as this is an ongoing, active process within the competition (ladder game play against comparably strong agents in the ranking etc.). For this work, we are going to take the following approaches for benchmarking our agent:
-* Peforming against an algorithm who plays in an uniformly random manner. In the Kaggle environment this algorithm is called "random".
+* Performing against an algorithm who plays in an uniformly random manner. In the Kaggle environment this algorithm is called "random".
 * A subsequent challenge, compete against an agent who plays according to the [Negamax](https://en.wikipedia.org/wiki/Negamax) search algorithm. The Kaggle environment provides an implementation for this algorithm as well called "negamax". TODO: explain negamax algorithm
 * OPTIONAL: [Connect4 Data Set](https://archive.ics.uci.edu/ml/datasets/Connect-4) from UC Irvine's Machine Learning Repository...
 * OPTIONAL: TicTacToe domination?
@@ -81,21 +81,36 @@ In this final section, summarize a theoretical workflow for approaching a soluti
 DRAFT:
 1. The Programming Stack:
     * Python 3.7
-    * numpy
+    * Numpy
     * Keras / TF 2.1
-2. The game environment/ datasets:
-    * Kaggle Environment: ToDo: Describe environment in more detail on its interface, inputs and outputs (e.g. env.configuration...).
-    *
-3. The techniques and algorithms
+2. The game environment specifications/ datasets:
+    * Kaggle Environment - ToDo: Describe environment in more detail on its interface, inputs and outputs (e.g. env.configuration...).
+    * Which classes are being used, e.g. Agent(), Game() etc..
+3. The techniques and algorithms:
+    * Reinforcement Learning algorithm:
+    - Q-Learning, a model-free RL algorithm that doesn't require a model of the environment (hence the "model free"). Q-Learning is a value-based method, as such it can identify optimal state-action (Q) value pairs for any given state of a finite Markov Decision Process. The goal is to learn an optimal policy, which tells an agent in any current state which action to take in order to maximise the expected value of the total reward (Q-value) over all subsequent steps. The alternative implementation as "Double Q-Learning" is  considered an off-policy algorithm, i.e. the policy that is learned is a different one from the actual action selection policy. This solves the overestimation issue (for action values) which usually slows the learning.
+    - Combining this with Deep Learning, we will get the Double Deep Q-Network algorithm which we are going to use in this work.
+    TODO: show formula of DQN - Q(s,a) = expected total reward starting at current state (s)
+    * Deep neural network (ConvNet?) as a representation of learned value function Q(s,a) and the approximation of the optimal/real Q-value
+    * Basic RL nomenclatures: current state (s), state at the next step (s'), action (a), policy (p) and reward (r)...
+
+
 4. Train & Evaluate:
+    * Training through self-play, i.e. an agent that plays games against itself? (Possible with Kaggle??)
+    * The target for model training is to approximate Q-value (Q(s,a)) = y^ and to update it through back propagation, for this a loss function L is introduced as:
+      - L = (Q(s,a), y^)
+    * This part is based on supervised learning. For that, Bellman Equation helps in finding the ground truth, i.e. the actual Q-value: Q(s,a) = max(r + Q(s',a)) --> if s is the terminal state, Q(s,a) = r
+    * Model updates could be very unstable due to the target value changes each time the model is updated --> solution is to create a target network which is a copy of the training model at specific time step which leads to the advantage that the target model updates less frequently.
+    * Another issue that we need to consider and check during training and evaluate is overfitting and the problematic effect of learning (false) correlation of time step t -> t+1 (temporal correlation). In order to counter balance that, we are going to use the experience replay buffer. This can store the values of hundreds of games and then can be used to select batches of game value tuples (s,a,r,s'), sampled at random, to train on and update the model.
+
 5. Fine tuning etc.
 
 ### Sources:
 * Kaggle (2020). _Simulation Competitions. Connect X - Connect your checkers in a row before your opponent!_. Retrieved from https://www.kaggle.com/c/connectx (February 6th, 2020).
 * Kaggle (2020). _Connect X - Overview - Environmental Rules_. Retrieved from https://www.kaggle.com/c/connectx/overview/environment-rules (February 7th, 2020)
 * Foster, David (2018). _How to build your own AlphaZero AI using Python and Keras_. Retrieved from https://medium.com/applied-data-science/how-to-build-your-own-alphazero-ai-using-python-and-keras-7f664945c188 (February 6th, 2020).
-*
-
+* Wikipedia (2020) - _Q-Learning_. Retrieved from https://en.wikipedia.org/wiki/Q-learning (February 13th, 2020)
+* Siwei Xu (2019) - _ _ Retrieved from https://towardsdatascience.com/deep-reinforcement-learning-build-a-deep-q-network-dqn-to-play-cartpole-with-tensorflow-2-and-gym-8e105744b998 (February 5th, 2020)
 -----------
 
 **Before submitting your proposal, ask yourself. . .**
